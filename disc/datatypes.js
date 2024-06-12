@@ -45,3 +45,4 @@
 // let newsum = add (1, 2);
 // console.log(newsum);
 // console.log(department);
+//# sourceMappingURL=datatypes.js.map

@@ -26,3 +26,4 @@ function getItems(items) {
 }
 let concatResult = getItems([1, 2, 3, 4, 5]);
 let concatString = getItems(['a', 'b', 'c', 'd', 'e']); // the <string> means that string will be the type in the array
+//# sourceMappingURL=functions.js.map
