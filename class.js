@@ -26,3 +26,14 @@ let marko = new EmployeeInformation(1, "Marko", "Chikago");
 console.log(marko);
 console.log(marko.getName());
 console.log(marko.getIdAndName());
+class Manager extends EmployeeInformation {
+    constructor(id, name, address) {
+        super(id, name, address);
+    }
+    getIdAndName() {
+        return `ID : ${this.id} is the ID of manager ${this.name}`;
+        //return 'id:' + this.id + "-" + this.name; - This is old versing but we can do it also like this.
+    }
+}
+let sara = new Manager(2, "Sara", "Boston");
+console.log(sara.getIdAndName());

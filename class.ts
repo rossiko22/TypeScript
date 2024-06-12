@@ -4,7 +4,7 @@
 // In Typescript we can only have default or parameterr , not both 
 
 class EmployeeInformation {
-    id: number;
+    id: number;  // private we can mark with private id , or in new angular 13 we use #id instead of private id
 
     name: string;
 
@@ -16,7 +16,7 @@ class EmployeeInformation {
         this.address = address
     }
 
-    getName() : string{ // dont forget to add the return type
+    public getName() : string{ // dont forget to add the return type
         return this.name;
     }
 
@@ -42,4 +42,18 @@ console.log(marko.getName());
 console.log(marko.getIdAndName());
 
 
+class Manager extends EmployeeInformation{
 
+    constructor(id: number, name: string, address: string){
+        super(id, name, address);
+    }
+
+    getIdAndName() : string{
+        return `ID : ${this.id} is the ID of manager ${this.name}` // this is override , we dont have to specify override, it is done automatically we just have to create function with same name
+        //return 'id:' + this.id + "-" + this.name; - This is old versing but we can do it also like this.
+    }
+}
+
+let sara = new Manager(2, "Sara", "Boston")
+
+console.log(sara.getIdAndName());
